@@ -1,0 +1,12 @@
+
+<% layout("./layouts/boilerplate") %>
+
+<h2>index.ejs</h2>
+
+<a href="/peoplethank/new">Create new Thank you</a>
+<h1>All People Thanked</h1>
+<ul>
+    <% for (let peopleThank of peopleThanks) { %>
+     <li><a href="peoplethank/<%= peopleThank.id %>"><%= peopleThank.name %></a></li>
+     <% } %>
+</ul>

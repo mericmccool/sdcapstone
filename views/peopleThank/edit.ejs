@@ -1,0 +1,36 @@
+<% layout("./layouts/boilerplate") %>
+
+<h1 class="text-center">Update<%=peopleThank.name%></h1>
+<h2>edit.ejs</h2>
+
+<div class="col-6 offset-3">
+	<form class="needs-validation" action="/peoplethank/<%=peopleThank.id%>/?_method=PUT" method="POST" novalidate>
+
+		<div class="mb-3">
+			<label class="form-label" for="name">PeopleThank Name</label>
+			<!-- we are using the square brackets in the name so that we can easily send data to our mongoose method without reformatting the body. -->
+			<input class="form-control" type="text" id="name" name="peoplethank[name]" value="<%= peopleThank.name%>" required>
+		</div>
+		<div class="mb-3">
+			<label class="form-label" for="description">Discription </label>
+			<input class="form-control" type="text" id="description" name="peoplethank[description]" value="<%= peopleThank.description%>" required>
+		</div>
+		<div class="mb-3">
+			<label class="form-label" for="image">Image </label>
+			<input class="form-control" type="text" id="image" name="peoplethank[image]" value="<%= peopleThank.image%>" required>
+		</div>
+		<div class="mb-3">
+			<label class="form-label" for="resonation">Resonation </label>
+			<input class="form-control" type="text" id="resonation" name="peoplethank[resonation]" value="<%= peopleThank.resonation%>" required>
+		</div>
+		<div class="mb-3">
+			<label class="form-label" for="company">Company </label>
+			<input class="form-control" type="text" id="company" name="peoplethank[company]" value="<%= peopleThank.company%>" required>
+		</div>
+		
+		<div class="mb-3">
+		<button>Submit</button>
+	    </div>
+		</form>
+		<a href="/peoplethank/<%=peopleThank.id%>">Go back to <%= peopleThank.name %></a>
+</div>

@@ -1,0 +1,50 @@
+<% layout("./layouts/boilerplate") %>
+<h2>show.ejs</h2>
+    
+<!-- show details -->
+
+    <img style="width: 200px" src="<%= peopleThank.image%>" alt="">    
+    <h1><%= peopleThank.name%></h1>
+    <p>Opened: <%= peopleThank.dateOpened %></p>
+    <h2><%= peopleThank.company%> <span><%= peopleThank.resonation%></span></h2>
+    
+
+    <p><%= peopleThank.description%></p>
+    
+    <div>
+        <a href="/peoplethank/<%= peopleThank.id%>/edit">Edit <%= peopleThank.name %></a>
+    </div>
+
+    <form action="/peoplethank/<%= peopleThank.id%>/delete?_method=DELETE" method="POST">
+        <button>Delete People Thank</button>
+    </form>
+    <a href="/peoplethank">Go to all Thanked people</a>
+   <!-- leaving a review -->
+    <h2>Leave a Review</h2>
+<form class="needs-validation" action="/peoplethank/<%= peopleThank.id%>/reviews" method="POST" novalidate>
+    <div>
+        <label class="form-label" for="rating">Rating</label>
+        <input class="form-range" name="review[rating]" type="range" min="0" max="5" step="1" required>
+    </div>
+    <div>
+        <label class="form-label" for="body">Review</label>
+        <textarea class="form-control" name="review[body]" id="body" cols="30" rows="5" required></textarea>
+    </div>
+    <button>Submit</button>
+</form>
+<a href="/peoplethank">Go back to all the People Thank list</a>
+
+<div>
+
+    <h3>Reviews</h3>
+    <% for (let review of peopleThank.reviews) {%> 
+    <div>
+        <p>Rating: <%=review.rating%></p>
+        <p>Reviews: <%=review.body%></p>
+        <form action="/peoplethank/<%=peopleThank.id%>/reviews/<%=review.id%>?_method=delete" method="POST">
+            <button>Delete</button>
+   >        </form>
+
+    </div>
+    <%}%>
+ </div

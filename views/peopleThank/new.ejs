@@ -1,0 +1,79 @@
+
+<% layout("./layouts/boilerplate") %>
+<h1 class="text-center">Create a new PeopleThank</h1>
+<div class="col-6 offset-3">
+	<h2>new.ejs</h2>
+
+    
+	<!-- <div>
+		<a href="/peoplethank">Go back to all the Thanked People</a>
+	</div> -->
+	
+	
+	<form class="needs-validation" action="/peoplethank" method="POST" novalidate>
+	
+	
+	<div class="mb-3">
+		<label class="form-label" for="name">PeopleThank Name</label>
+		<!-- we are using the square brackets in the name so that we can easily send data to our mongoose method without reformatting the body. -->
+		<input class="form-control" type="text" id="name" name="peoplethank[name]" required>
+	</div>
+	<div class="mb-3">
+		<label class="form-label" for="description">Discription </label>
+		<input class="form-control" type="text" id="description" name="peoplethank[description]" required>
+	</div>
+		    
+	<div class="mb-3">
+		<label class="form-label" for="image">Choose Image</label>
+		<input class="form-control" type="text" id="image" name="peoplethank[image]" required>
+	</div>
+	<div class="mb-3">
+		<label class="form-label" for="resonation">Resonation</label>
+		<input class="form-control" type="text" id="resonation" name="peoplethank[resonation]" required>
+	</div>
+	
+	<div class="mb-3">
+		<label class="form-label" for="company">Choose company</label>
+		<input class="form-control" type="text" id="company" name="peoplethank[company]" required>	
+	
+	</div>
+
+	<!-- <div class="mb-3">
+		<label class="form-label" for="resonation">Price</label>
+		<select name="peoplethanks[resonation]" id="resonation">
+		 <option value="$">$</option>
+		 <option value="$$">$$</option>
+		 <option value="$$$">$$$</option>
+		</select>
+	</div> -->
+	
+	<div class="mb-3">
+	<button class="btn btn-success">Submit</button>
+    </div>
+	
+	</form>
+	<a href="/peoplethank">Go back to all the People Thanked</a>
+
+</div>
+
+<script>
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
