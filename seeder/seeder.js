@@ -20,7 +20,7 @@ mongoose
                   'https://images.unsplash.com/photo-1503610594381-aed30c818b8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZGl0dWRlfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60',
             resonation:"&",
             company:"isdfs",  
-               
+            submittedBy: "606f49b5f42ebc193825df04"   
         },
         {
             name: " Dr. Lindsay", 
@@ -29,7 +29,7 @@ mongoose
                   'https://images.unsplash.com/photo-1503610594381-aed30c818b8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZGl0dWRlfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60',
             resonation:"&",
             company:"isdfs", 
-                 
+            submittedBy: "606f49b5f42ebc193825df04"      
         },
         {
             name: " Daivd Price", 
@@ -38,7 +38,7 @@ mongoose
                   'https://images.unsplash.com/photo-1503610594381-aed30c818b8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZGl0dWRlfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60',
             resonation:"&",
             company:"isdfs", 
-            
+            submittedBy: "606f49b5f42ebc193825df04" 
         },
         {
             name: " Chris Chandler", 
@@ -47,7 +47,7 @@ mongoose
                   'https://images.unsplash.com/photo-1503610594381-aed30c818b8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZGl0dWRlfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60',
             resonation:"&",
             company:"isdfs", 
-                 
+            submittedBy: "606f49b5f42ebc193825df04"      
         },
         {
             name: " Johnny James", 
@@ -56,7 +56,7 @@ mongoose
                   'https://images.unsplash.com/photo-1503610594381-aed30c818b8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZGl0dWRlfGVufDB8fDB8&auto=format&fit=crop&w=600&q=60',
             resonation:"&",
             company:"isdfs",
-            
+            submittedBy: "606f49b5f42ebc193825df04" 
         },
     ]
 

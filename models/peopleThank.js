@@ -8,6 +8,11 @@ const PeopleThankSchema = new Schema({
     image: String,
     resonation: String,
     company: String,
+    submittedBy: {
+		type: Schema.Types.ObjectId,
+		ref: "User"
+	},
+   
         reviews: [
         {
         type: Schema.Types.ObjectId,

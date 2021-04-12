@@ -12,7 +12,9 @@
 </head>
 <body class="d-flex flex-column vh-100">
     <!-- We will add our eis-mate reference for our content here -->
-    <%- include("../partials/navbar") %>
+    <%- include("../partials/navbar.ejs") %>
+    <%- include("../partials/flash.ejs") %>
+
     <div class="mt-4 container">
     <%- body %>
     </div>
@@ -30,7 +32,7 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
 
-<script>
+<!-- <script>
             (function () {
                 'use strict'
     
@@ -50,7 +52,7 @@
                         }, false)
                     })
             })()
-</script>
+</script> -->
     
     
     
